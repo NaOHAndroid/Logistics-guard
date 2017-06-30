@@ -8,5 +8,6 @@
 /captures
 .externalNativeBuild
 *.iws
+.idea/
 .idea/modules.xml
 .idea/vcs.xml
