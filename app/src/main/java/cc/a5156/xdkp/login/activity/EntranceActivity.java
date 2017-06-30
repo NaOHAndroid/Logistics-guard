@@ -62,6 +62,7 @@ public class EntranceActivity extends BaseActivity {
 //                IMUtil.initECSDK(etAccount.getText().toString());
                 StartActivity.getInstance().startHomeActivity();
                 finish();
+
             }
         });
     }
