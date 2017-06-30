@@ -40,4 +40,5 @@ captures/
 *.jks
 
 *.iws
-.idea/
+.idea/modules.xml
+.idea/vcs.xml
