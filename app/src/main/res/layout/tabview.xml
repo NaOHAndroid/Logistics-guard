@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:id="@+id/cbMessage"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/base_checkbox_bg"
+        android:button="@null"
+        android:gravity="center"
+        android:text="@string/message" />
+
+    <CheckBox
+        android:id="@+id/cbReceive"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/base_checkbox_bg"
+        android:button="@null"
+        android:gravity="center"
+        android:text="@string/receive" />
+
+    <CheckBox
+        android:id="@+id/cbDiliver"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/base_checkbox_bg"
+        android:button="@null"
+        android:gravity="center"
+        android:text="@string/diliver" />
+
+    <CheckBox
+        android:id="@+id/cbOffice"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/base_checkbox_bg"
+        android:button="@null"
+        android:gravity="center"
+        android:text="@string/office" />
+
+    <CheckBox
+        android:id="@+id/cbMe"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/base_checkbox_bg"
+        android:button="@null"
+        android:gravity="center"
+        android:text="@string/me" />
+</LinearLayout>

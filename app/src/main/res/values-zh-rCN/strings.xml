@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">小递快跑</string>
+    <string name="dytx">大盈通信技术有限公司\r\n\r\n\r\n广告页</string>
+    <string name="hint_account">请输入用户名</string>
+    <string name="hint_pasword">请输入密码</string>
+    <string name="login">登录</string>
+    <string name="message">消息</string>
+    <string name="receive">收件</string>
+    <string name="diliver">派件</string>
+    <string name="office">云办公</string>
+    <string name="me">我</string>
+
+
+    <!--权限字段-->
+    <string name="permission">权限(permission)</string>
+    <string name="no_permissions">应用需要必要的运行权限</string>
+    <string name="settings">设置</string>
+    <string name="help">帮助</string>
+    <string name="string_help_text">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。\n\n最后点击两次后退按钮，即可返回。</string>
+    <string name="quit">退出</string>
+
+    <!--实名制-->
+    <string name="action_settings">设置</string>
+    <string name="title_other_devices">其他可用设备</string>
+    <string name="title_paired_devices">已配对设备</string>
+    <string name="none_paired">没有配对设备</string>
+    <string name="scanning">扫描设备中...</string>
+    <string name="select_device">选择要连接的设备</string>
+    <string name="none_found">未找到设备</string>
+    <string name="title_connected_devices">已连接</string>
+    <string name="not_connected">您没有连接到设备</string>
+    <string name="select_disconnect_device">选择要断开连接的设备</string>
+    <string name="button_scan">扫描</string>
+</resources>

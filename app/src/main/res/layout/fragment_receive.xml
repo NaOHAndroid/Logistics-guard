@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pearl_white"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <cc.a5156.xdkp.common.view.BaseItem
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:text="扫一扫（扫码打电话（默认）/扫描发短信/扫描留言）" />
+
+    <cc.a5156.xdkp.common.view.BaseItem
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:text="打电话/发短信/留言" />
+
+    <cc.a5156.xdkp.common.view.BaseItem
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:text="查抬头/查件/查报价" />
+
+</LinearLayout>

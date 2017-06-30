@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="permissions">
+        <item>android.permission.RECORD_AUDIO</item>
+        <item>android.permission.INTERNET</item>
+        <item>android.permission.ACCESS_NETWORK_STATE</item>
+        <item>android.permission.ACCESS_WIFI_STATE</item>
+        <item>android.permission.WRITE_EXTERNAL_STORAGE</item>
+        <item>android.permission.READ_EXTERNAL_STORAGE</item>
+        <item>android.permission.READ_PHONE_STATE</item>
+        <item>android.permission.GET_TASKS</item>
+        <item>android.permission.RECORD_AUDIO</item>
+        <item>android.permission.MODIFY_AUDIO_SETTINGS</item>
+        <item>android.permission.WAKE_LOCK</item>
+        <item>android.permission.CAMERA</item>
+    </string-array>
+</resources>

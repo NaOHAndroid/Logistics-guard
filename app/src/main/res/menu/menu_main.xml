@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ewcdma.readerdemo.MainActivity">
+    <item
+        android:id="@+id/action_bluetooth"
+        android:orderInCategory="100"
+        android:title="BLUETOOTH"
+         />
+<!--    <item
+        android:id="@+id/action_nfc"
+        android:orderInCategory="100"
+        android:title="NFC"
+        />
+    <item
+        android:id="@+id/action_otg"
+        android:orderInCategory="100"
+        android:title="OTG"
+        />-->
+</menu>

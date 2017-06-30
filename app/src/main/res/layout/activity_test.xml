@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="400dp"
+        android:layout_height="400dp" />
+
+    <EditText
+        android:id="@+id/etTarget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="18565716880" />
+
+    <Button
+        android:id="@+id/bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试" />
+
+    <Button
+        android:id="@+id/btGet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="get" />
+</LinearLayout>
