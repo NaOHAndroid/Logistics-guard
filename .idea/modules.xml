@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Logistics-guard.iml" filepath="$PROJECT_DIR$/Logistics-guard.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Logistics-guard.iml" filepath="$PROJECT_DIR$/Logistics-guard.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/javatest/javatest.iml" filepath="$PROJECT_DIR$/javatest/javatest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/javatest/javatest.iml" filepath="$PROJECT_DIR$/javatest/javatest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/YourProjectName.iml" filepath="$PROJECT_DIR$/.idea/modules/YourProjectName.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/YourProjectName.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/YourProjectName.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/YourProjectName.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/YourProjectName.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/YourProjectName.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/YourProjectName.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/YourProjectName.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/YourProjectName.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javatest/YourProjectName.javatest.iml" filepath="$PROJECT_DIR$/.idea/modules/javatest/YourProjectName.javatest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javatest/YourProjectName.javatest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/javatest/YourProjectName.javatest.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javatest/YourProjectName.javatest.test.iml" filepath="$PROJECT_DIR$/.idea/modules/javatest/YourProjectName.javatest.test.iml" />
     </modules>
   </component>
 </project>

@@ -2,12 +2,9 @@ package cc.a5156.xdkp.common.base;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.ActivityCompat;
 
 import cc.a5156.xdkp.login.activity.HomeActivity;
 import cc.a5156.xdkp.login.activity.LoginActivity;
-import cc.a5156.xdkp.message.activity.TestActivity;
-import cc.a5156.xdkp.message.activity.TestActivity2;
 import cc.a5156.xdkp.message.activity.TestActivity3;
 import cc.a5156.xdkp.message.temp.CallHistoryActivity;
 

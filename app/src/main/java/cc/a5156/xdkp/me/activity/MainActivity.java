@@ -1,7 +1,8 @@
 package cc.a5156.xdkp.me.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import cc.a5156.xdkp.R;
 

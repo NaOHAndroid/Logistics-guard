@@ -11,7 +11,6 @@ import android.widget.Button;
 import java.io.File;
 import java.io.IOException;
 
-import butterknife.BindView;
 import cc.a5156.xdkp.R;
 import cc.a5156.xdkp.common.base.BaseFragment;
 import cc.a5156.xdkp.common.base.StartActivity;
@@ -23,15 +22,10 @@ import cc.a5156.xdkp.common.base.StartActivity;
 public class MessageFragment extends BaseFragment implements View.OnClickListener {
 
 
-    @BindView(R.id.btTest)
     Button btTest;
-    @BindView(R.id.btCallHistory)
     Button btCallHistory;
-    @BindView(R.id.btStartService)
     Button btStartService;
-    @BindView(R.id.btStopService)
     Button btStopService;
-    @BindView(R.id.btPlayRecord)
     Button btPlayRecord;
     private MediaPlayer mediaPlayer;
 
@@ -44,6 +38,11 @@ public class MessageFragment extends BaseFragment implements View.OnClickListene
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        btTest = view.findViewById(R.id.btTest);
+        btCallHistory = view.findViewById(R.id.btCallHistory);
+        btStartService = view.findViewById(R.id.btStartService);
+        btStopService = view.findViewById(R.id.btStopService);
+        btPlayRecord = view.findViewById(R.id.btPlayRecord);
         mediaPlayer = new MediaPlayer();
         setListener();
     }
@@ -58,26 +57,22 @@ public class MessageFragment extends BaseFragment implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btTest:
-                StartActivity.getInstance().startTestActivity();
-                break;
-            case R.id.btCallHistory:
-                StartActivity.getInstance().startCallHistoryActivity();
-                break;
-//            case R.id.btStartService:
-//                getContext().startService(new Intent(getContext(), PhoneService.class));
-//                break;
-//            case R.id.btStopService:
-//                getContext().stopService(new Intent(getContext(), PhoneService.class));
-//                break;
-            case R.id.btPlayRecord:
-                try {
-                    playRecord();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                break;
+        if (v.getId() == R.id.btTest) {
+            StartActivity.getInstance().startTestActivity();
+        } else if (v.getId() == R.id.btCallHistory) {
+            StartActivity.getInstance().startCallHistoryActivity();
+        }
+// else if (v.getId() == R.id.btStartService) {
+//     getContext().startService(new Intent(getContext(), PhoneService.class));
+// } else if (v.getId() == R.id.btStopService) {
+//     getContext().stopService(new Intent(getContext(), PhoneService.class));
+// }
+        else if (v.getId() == R.id.btPlayRecord) {
+            try {
+                playRecord();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 

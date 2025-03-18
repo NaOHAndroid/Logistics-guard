@@ -3,8 +3,9 @@ package cc.a5156.xdkp.message.temp;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
 
 import cc.a5156.xdkp.R;
 import cc.a5156.xdkp.common.util.PublicUtil;

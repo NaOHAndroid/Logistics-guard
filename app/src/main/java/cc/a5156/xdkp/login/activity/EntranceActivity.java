@@ -3,14 +3,10 @@ package cc.a5156.xdkp.login.activity;
 import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import cc.a5156.xdkp.R;
 import cc.a5156.xdkp.common.base.BaseActivity;
 import cc.a5156.xdkp.common.base.StartActivity;
@@ -23,9 +19,6 @@ import cc.a5156.xdkp.common.util.PermissionsChecker;
  */
 
 public class EntranceActivity extends BaseActivity {
-    @BindView(R.id.etAccount)
-    EditText etAccount;
-    @BindView(R.id.btInit)
     Button btInit;
     private PermissionsChecker mPermissionsChecker;
     private static final int REQUEST_CODE = 0; // 请求码
@@ -52,8 +45,8 @@ public class EntranceActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entrance);
-        ButterKnife.bind(this);
 
+        btInit=findViewById(R.id.btInit);
         mPermissionsChecker = new PermissionsChecker(this);
         btInit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,9 +64,9 @@ public class EntranceActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if (mPermissionsChecker.lacksPermissions(permissions)) {
-            PermissionsActivity.startActivityForResult(this, REQUEST_CODE, permissions);
-        }
+//        if (mPermissionsChecker.lacksPermissions(permissions)) {
+//            PermissionsActivity.startActivityForResult(this, REQUEST_CODE, permissions);
+//        }
     }
 
 
@@ -81,8 +74,8 @@ public class EntranceActivity extends BaseActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         // 拒绝时, 关闭页面, 缺少主要权限, 无法运行
-        if (requestCode == REQUEST_CODE && resultCode == PermissionsActivity.PERMISSIONS_DENIED) {
-            finish();
-        }
+//        if (requestCode == REQUEST_CODE && resultCode == PermissionsActivity.PERMISSIONS_DENIED) {
+//            finish();
+//        }
     }
 }

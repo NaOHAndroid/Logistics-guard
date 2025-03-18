@@ -1,18 +1,17 @@
 package cc.a5156.xdkp.login.view;
 
 import android.content.Context;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTransaction;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
+
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import cc.a5156.xdkp.R;
 import cc.a5156.xdkp.common.base.BaseFragment;
 
@@ -21,15 +20,10 @@ import cc.a5156.xdkp.common.base.BaseFragment;
  */
 
 public class TabView extends LinearLayout implements CompoundButton.OnCheckedChangeListener {
-    @BindView(R.id.cbMessage)
     CheckBox cbMessage;
-    @BindView(R.id.cbReceive)
     CheckBox cbReceive;
-    @BindView(R.id.cbDiliver)
     CheckBox cbDiliver;
-    @BindView(R.id.cbOffice)
     CheckBox cbOffice;
-    @BindView(R.id.cbMe)
     CheckBox cbMe;
 
 
@@ -40,7 +34,11 @@ public class TabView extends LinearLayout implements CompoundButton.OnCheckedCha
         super(context, attrs);
         this.context = (FragmentActivity) context;
         View.inflate(context, R.layout.tabview, this);
-        ButterKnife.bind(this);
+        cbMessage=findViewById(R.id.cbMessage);
+        cbReceive=findViewById(R.id.cbReceive);
+        cbDiliver=findViewById(R.id.cbDiliver);
+        cbOffice=findViewById(R.id.cbOffice);
+        cbMe=findViewById(R.id.cbMe);
         setListener();
     }
 
@@ -67,22 +65,16 @@ public class TabView extends LinearLayout implements CompoundButton.OnCheckedCha
 //            fragmentTransaction.hide(fragment);
 //        }
 //        fragmentTransaction.commit();
-        switch (buttonView.getId()) {
-            case R.id.cbMessage:
-                handleFragment(fragments.get(0), isChecked);
-                break;
-            case R.id.cbReceive:
-                handleFragment(fragments.get(1), isChecked);
-                break;
-            case R.id.cbDiliver:
-                handleFragment(fragments.get(2), isChecked);
-                break;
-            case R.id.cbOffice:
-                handleFragment(fragments.get(3), isChecked);
-                break;
-            case R.id.cbMe:
-                handleFragment(fragments.get(4), isChecked);
-                break;
+        if (buttonView.getId() == R.id.cbMessage) {
+            handleFragment(fragments.get(0), isChecked);
+        } else if (buttonView.getId() == R.id.cbReceive) {
+            handleFragment(fragments.get(1), isChecked);
+        } else if (buttonView.getId() == R.id.cbDiliver) {
+            handleFragment(fragments.get(2), isChecked);
+        } else if (buttonView.getId() == R.id.cbOffice) {
+            handleFragment(fragments.get(3), isChecked);
+        } else if (buttonView.getId() == R.id.cbMe) {
+            handleFragment(fragments.get(4), isChecked);
         }
     }
 

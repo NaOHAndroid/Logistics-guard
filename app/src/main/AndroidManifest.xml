@@ -44,7 +44,8 @@
         </activity>
         <activity android:name=".login.activity.LoginActivity" />
         <activity android:name=".login.activity.HomeActivity" />
-        <activity android:name=".login.activity.EntranceActivity">
+        <activity android:name=".login.activity.EntranceActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -62,14 +63,15 @@
         <activity
             android:name=".message.activity.DeviceListActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:label="@string/select_device"
+            android:label="DeviceListActivity"
             android:theme="@android:style/Theme.Dialog" />
         <activity android:name=".message.temp.CallHistoryActivity" />
 
         <!--<service android:name=".common.service.PhoneService" />-->
         <service android:name=".common.phonerecord.RecordAudioService" />
 
-        <receiver android:name=".common.phonerecord.PhoneStatReceiver">
+        <receiver android:name=".common.phonerecord.PhoneStatReceiver"
+            android:exported="true">
             <intent-filter android:priority="1000">
                 <action android:name="android.intent.action.PHONE_STATE" />
                 <action android:name="android.intent.action.NEW_OUTGOING_CALL" />

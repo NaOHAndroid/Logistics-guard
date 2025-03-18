@@ -5,8 +5,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import cc.a5156.xdkp.R;
 import cc.a5156.xdkp.common.base.BaseActivity;
 import cc.a5156.xdkp.common.base.StartActivity;
@@ -16,18 +14,13 @@ import cc.a5156.xdkp.common.base.StartActivity;
  * Created by Administrator on 2017/6/6.
  */
 public class LoginActivity extends BaseActivity {
-    @BindView(R.id.etAccount)
-    EditText etAccount;
-    @BindView(R.id.etPassword)
-    EditText etPassword;
-    @BindView(R.id.btLogin)
     Button btLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ButterKnife.bind(this);
+        btLogin=findViewById(R.id.btLogin);
         btLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

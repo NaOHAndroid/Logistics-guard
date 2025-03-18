@@ -5,17 +5,16 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
 
+import androidx.core.app.ActivityCompat;
+
 import java.io.IOException;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import cc.a5156.xdkp.R;
 import cc.a5156.xdkp.common.base.BaseActivity;
 import cc.a5156.xdkp.common.http.OkHttpClientManager;
@@ -28,13 +27,9 @@ import cc.a5156.xdkp.common.util.ToastUtil;
  * Created by Administrator on 2017/6/7 12.
  */
 public class TestActivity extends BaseActivity {
-    @BindView(R.id.iv)
     ImageView iv;
-    @BindView(R.id.bt)
     Button bt;
-    @BindView(R.id.etTarget)
     EditText etTarget;
-    @BindView(R.id.btGet)
     Button btGet;
 
     private PermissionsChecker mPermissionsChecker;
@@ -61,7 +56,10 @@ public class TestActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
-        ButterKnife.bind(this);
+        iv = findViewById(R.id.iv);
+        bt = findViewById(R.id.bt);
+        etTarget = findViewById(R.id.etTarget);
+        btGet = findViewById(R.id.btGet);
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

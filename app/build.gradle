@@ -1,51 +1,62 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion '25.0.3'
+    namespace 'cc.a5156.xdkp'
+    compileSdk 34
+
     defaultConfig {
         applicationId "cc.a5156.xdkp"
-//        Android 4.2原生系统缺乏对4.0的支持,至少需要4.3即api 18
-        minSdkVersion 23
-        targetSdkVersion 23
+        minSdkVersion 26
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
     sourceSets {
         main {
             jniLibs.srcDirs = ['libs']
         }
     }
-//    splits {
-//        abi {
-//            enable true
-//            reset()
-//            include 'x86', 'armeabi-v7a'
-//            universalApk true
-//        }
-//    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
 }
 
-
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.squareup.okhttp:okhttp:2.4.0'
-    testCompile 'junit:junit:4.12'
-    compile 'com.google.code.gson:gson:2.7'
-    compile 'com.jakewharton:butterknife:8.5.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-    compile 'com.android.support:design:25.3.1'
-    compile files('libs/reader-sdk1.90.jar')
-    compile 'org.apache.logging.log4j:log4j:2.8.2'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // AndroidX 兼容性库（替换老版 support library）
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.annotation:annotation:1.9.1'
+
+    // 测试库
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+    testImplementation 'junit:junit:4.13.2'
+
+    // 网络请求
+    implementation 'com.squareup.okhttp3:okhttp:4.11.0'
+
+    // JSON 解析
+    implementation 'com.google.code.gson:gson:2.12.1'
+
+
+
+    // Material Design
+    implementation 'com.google.android.material:material:1.12.0'
+    // 日志
+    implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+
+    // 额外 JAR 包
+    implementation files('libs/reader-sdk1.90.jar')
 }

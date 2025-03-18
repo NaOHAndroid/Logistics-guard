@@ -14,7 +14,7 @@
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_marginBottom="10dp"
-            android:hint="@string/hint_account"
+            android:hint="请输入账号"
             android:text="13670299410" />
 
         <EditText
@@ -22,13 +22,13 @@
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_marginBottom="10dp"
-            android:hint="@string/hint_pasword"
+            android:hint="请输入密码"
             android:inputType="textPassword" />
 
         <Button
             android:id="@+id/btLogin"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:text="@string/login" />
+            android:text="登录" />
     </LinearLayout>
 </RelativeLayout>

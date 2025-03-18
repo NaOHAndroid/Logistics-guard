@@ -1,20 +1,20 @@
 package cc.a5156.xdkp.login.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
 import android.widget.Button;
 import android.widget.CheckBox;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import cc.a5156.xdkp.R;
 import cc.a5156.xdkp.common.base.BaseFragment;
 import cc.a5156.xdkp.common.util.ToastUtil;
@@ -42,19 +42,19 @@ public class HomeActivity extends FragmentActivity {
     private Button btMe;
     private BaseFragment lastShowFragment;
 
-    @BindView(R.id.tabLayout)
     TabLayout tabLayout;
 
-    @BindView(R.id.viewPager)
     ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        ButterKnife.bind(this);
         initFragments();
 //        intBottom();
+
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
 
 
         viewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
@@ -160,6 +160,7 @@ public class HomeActivity extends FragmentActivity {
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
         long currTime = System.currentTimeMillis();
         if (currTime - lastTime < 2000) {
             finish();

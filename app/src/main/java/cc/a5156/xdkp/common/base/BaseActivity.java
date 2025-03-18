@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 
-import butterknife.ButterKnife;
 
 /**
  * Created by Administrator on 2017/6/6.

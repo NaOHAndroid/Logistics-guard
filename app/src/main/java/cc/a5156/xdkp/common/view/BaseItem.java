@@ -22,21 +22,17 @@ public class BaseItem extends LinearLayout {
         super(context, attrs);
         this.context = context;
         View.inflate(context, R.layout.base_item, this);
-        tvContent = (TextView) findViewById(R.id.tvContent);
+        tvContent = findViewById(R.id.tvContent);
         initAttrs(attrs);
 
     }
 
     private void initAttrs(AttributeSet attrs) {
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.BaseItem);
-        for (int i = 0; i < ta.getIndexCount(); i++) {
-            int attr = ta.getIndex(i);
-            switch (attr) {
-                case R.styleable.BaseItem_text:
-                    tvContent.setText(ta.getString(attr));
-                    break;
-            }
-
+        String text = ta.getString(R.styleable.BaseItem_text);
+        if (text != null) {
+            tvContent.setText(text);
         }
+        ta.recycle();
     }
 }

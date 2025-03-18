@@ -8,9 +8,10 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
 
 import cc.a5156.xdkp.R;
 
@@ -113,11 +114,11 @@ public class PermissionsActivity extends Activity {
     // 显示缺失权限提示
     private void showMissingPermissionDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(PermissionsActivity.this);
-        builder.setTitle(R.string.help);
-        builder.setMessage(R.string.string_help_text);
+        builder.setTitle(getString(R.string.help));
+        builder.setMessage(getString(R.string.string_help_text));
 
         // 拒绝, 退出应用
-        builder.setNegativeButton(R.string.quit, new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(getString(R.string.quit), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 setResult(PERMISSIONS_DENIED);
@@ -125,7 +126,7 @@ public class PermissionsActivity extends Activity {
             }
         });
 
-        builder.setPositiveButton(R.string.settings, new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("settings", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 startAppSettings();
